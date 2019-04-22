@@ -1,0 +1,150 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-22 22:28:15.603482721 UTC
+
+interface haskell-bio-0.1.0.0-KrN3u7of47VGZJbVfctQp2:BWTlib 8064
+  interface hash: 9a909114bd72c82e527aa7188369247e
+  ABI hash: aa38b5b3ff8f67e0ac24262201942e3f
+  export-list hash: efc0db9140c83e4385025c7aabb31da5
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b6427d8aeb77a442ff3ccc1f154c876f
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  BWTlib.constructBWT
+  BWTlib.rotate
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Data.Foldable 5f70351366640f007be66681d2212df8
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+04515e344d084c2195a7c7c8954938a7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   BWTlib.$trModule3
+                   BWTlib.$trModule1) -}
+71beee0b73593f471773812a3b5bc332
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS BWTlib.$trModule2) -}
+ef83099846af01557f503a80b9c188eb
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("BWTlib"#) -}
+7809590cc9f5920680246ceb28c498cc
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS BWTlib.$trModule4) -}
+eaed2914cbecf13f24328d7edd3cddbf
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("haskell-bio-0.1.0.0-KrN3u7of47VGZJbVfctQp2"#) -}
+8dbcd48882e105a467a09ae4180fc353
+  $wunsafeDrop :: GHC.Prim.Int# -> [a1] -> [a1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U>,
+     Inline: [2] -}
+b42724289449a491033f69bf44e06760
+  constructBWT :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Base.String) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char s 0# of ww2 { DEFAULT ->
+                 case GHC.Prim.># 0# ww2 of lwild {
+                   DEFAULT
+                   -> let {
+                        x :: [GHC.Types.Char]
+                        = GHC.Base.++ @ GHC.Types.Char s BWTlib.constructBWT2
+                      } in
+                      let {
+                        ls :: [GHC.Types.Char]
+                        = case x of wild {
+                            [] -> GHC.List.cycle1 @ GHC.Types.Char
+                            : ipv ipv1
+                            -> letrec {
+                                 xs' :: [GHC.Types.Char]
+                                 = GHC.Base.++_$s++ @ GHC.Types.Char xs' ipv ipv1
+                               } in
+                               xs' }
+                      } in
+                      let {
+                        lvl :: [GHC.Types.Char] = BWTlib.constructBWT_go2 ls x
+                      } in
+                      letrec {
+                        go :: GHC.Prim.Int# -> [[GHC.Types.Char]]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x1 :: GHC.Prim.Int#) ->
+                          GHC.Types.:
+                            @ [GHC.Types.Char]
+                            (case GHC.Prim.<=# x1 0# of lwild1 {
+                               DEFAULT
+                               -> BWTlib.constructBWT_go2
+                                    (BWTlib.$wunsafeDrop @ GHC.Types.Char x1 ls)
+                                    x
+                               1# -> lvl })
+                            (case GHC.Prim.==# x1 ww2 of lwild1 {
+                               DEFAULT -> go (GHC.Prim.+# x1 1#)
+                               1# -> GHC.Types.[] @ [GHC.Types.Char] })
+                      } in
+                      BWTlib.constructBWT_go
+                        (Data.OldList.sortBy
+                           @ [GHC.Types.Char]
+                           GHC.Classes.$fOrd[]_$s$ccompare1
+                           (go 0#))
+                   1# -> BWTlib.constructBWT1 } }) -}
+f5f05a3a854af4ac9ee8e0ede8403cea
+  constructBWT1 :: [GHC.Types.Char]
+  {- Unfolding: (BWTlib.constructBWT_go
+                   (Data.OldList.sortBy
+                      @ [GHC.Types.Char]
+                      GHC.Classes.$fOrd[]_$s$ccompare1
+                      (GHC.Types.[] @ [GHC.Types.Char]))) -}
+2e50c56e716c03251d40dfcc90c46a08
+  constructBWT2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# BWTlib.constructBWT3) -}
+6d607a25d58b024d7d51f93194b12d56
+  constructBWT3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("$"#) -}
+0bdef6a5595dd31957a8c650931a6d09
+  constructBWT_go :: [[GHC.Types.Char]] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+6e750aa2511d03d9358834c5fc4460d7
+  constructBWT_go2 ::
+    [GHC.Types.Char] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+7f96ad1abe85fa1df4c66123028af4b9
+  rotate :: [a] -> GHC.Types.Int -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(U)>,
+     Unfolding: (\ @ a (ds :: [a]) (ds1 :: GHC.Types.Int) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ a
+                   : ipv ipv1
+                   -> case ds1 of wild1 { GHC.Types.I# x ->
+                      letrec {
+                        xs' :: [a] = GHC.Base.++_$s++ @ a xs' ipv ipv1
+                      } in
+                      case GHC.Prim.<=# x 0# of lwild {
+                        DEFAULT -> BWTlib.rotate1 @ a (BWTlib.$wunsafeDrop @ a x xs') wild
+                        1# -> BWTlib.rotate1 @ a xs' wild } } }) -}
+cbc7d9a3adb291461b13a8e202a1d2a9
+  rotate1 :: [a] -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+
