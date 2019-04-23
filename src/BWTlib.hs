@@ -1,5 +1,6 @@
 module BWTlib (
     constructBWT,
+    decodeBWT,
     rotate
 ) where
 
@@ -14,3 +15,5 @@ rotate :: [a] -> Int -> [a]
 rotate [] _ = []
 rotate xs n = zipWith const (drop n (cycle xs)) xs
 
+decodeBWT :: String -> String
+decodeBWT bwt = head [l | l <- (foldl (\b a -> sort $ zipWith (++) [[x] | x <- a] b) (replicate (length(bwt)) "") (replicate (length(bwt)) bwt)), last l == '$']

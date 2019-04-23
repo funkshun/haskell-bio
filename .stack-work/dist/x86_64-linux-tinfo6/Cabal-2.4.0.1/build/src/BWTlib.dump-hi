@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2019-04-22 22:28:15.603482721 UTC
+2019-04-23 14:32:40.526204698 UTC
 
 interface haskell-bio-0.1.0.0-KrN3u7of47VGZJbVfctQp2:BWTlib 8064
-  interface hash: 9a909114bd72c82e527aa7188369247e
+  interface hash: 19587c1dc82ebc685453c81095cb79f9
   ABI hash: aa38b5b3ff8f67e0ac24262201942e3f
   export-list hash: efc0db9140c83e4385025c7aabb31da5
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -32,6 +32,7 @@ import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
 import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
 import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
 import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
 04515e344d084c2195a7c7c8954938a7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
